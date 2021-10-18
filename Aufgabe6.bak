@@ -1,3 +1,5 @@
+;Schreiben Sie eine Funktion sum-my-list, die eine Liste mit Zahlen erhält und diese aufaddiert.
+
 #lang racket
 
 (define (sum-my-list listOfNumbers)
@@ -11,4 +13,8 @@
     (set! sum (+ sum (list-ref listOfNumbers i))))
   
   ;Returns the sum of the list
-  sum)
+  sum
+  )
+
+
+(sum-my-list '(2 5 3))

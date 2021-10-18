@@ -1,3 +1,5 @@
+;Schreiben Sie eine Funktion square-my-list, die eine Liste mit Zahlen erhält und eine neue Liste der Quadrate dieser Zahlen zurückliefert.
+
 #lang racket
 
 (define (square-my-list inputList)
@@ -12,3 +14,5 @@
   
   ;Returns the list in which the square numbers are located
   outputList)
+
+(square-my-list '(1 2 3 4 5))

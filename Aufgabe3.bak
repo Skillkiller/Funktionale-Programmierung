@@ -1,3 +1,5 @@
+;;Schreiben Sie eine Funktion, die eine natürliche Zahl n erhält und eine Liste der natürlichen Zahlen von n bis 1 erzeugt.
+
 #lang racket
 
 (define (numbers-from-n-to-1 n)
@@ -16,3 +18,5 @@
   ;Returns the list of elements from n-1
   numbers
 )
+
+(numbers-from-n-to-1 51)

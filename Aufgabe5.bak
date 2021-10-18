@@ -1,3 +1,5 @@
+;Schreiben Sie eine Funktion my-find, die eine Liste lst und ein Argument x erhält und mittels equal? prüft, ob das Element in der Liste enthalten ist. Die Funktion soll #t antworten, wenn dem so ist, oder "#f" wenn nicht.
+
 #lang racket
 
 (define (my-find lst x)
@@ -16,4 +18,9 @@
        (set! returnValue #t)]))
 
   ;Returns the status whether the element was found or not 
-  returnValue)
+  returnValue
+  )
+
+(my-find '(1 2 3) 2)
+
+(my-find '(1 2 3) 4)
