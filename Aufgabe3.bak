@@ -13,6 +13,6 @@
     ;Add the i-th element to the list, adds this at the first place
     (set! numbers (append (list i) numbers)))
     
-  ;Returns the list of elements from n to 1
+  ;Returns the list of elements from n-1
   numbers
 )
