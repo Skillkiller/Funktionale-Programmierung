@@ -1,4 +1,6 @@
-#lang racket
+#lang racket/base
+
+(require rackunit)
 
 (define (sum-my-list-rec listOfNumbers)
 
@@ -14,8 +16,8 @@
         ;Adds the first element of the list to the sum and then throws it out of the list
         ;Starts the inner recursion again
         (begin
-          (set! sum (+ sum (first numbers)))
-          (set! numbers (remove (first numbers) numbers))
+          (set! sum (+ sum (car numbers)))
+          (set! numbers (remove (car numbers) numbers))
           (inner-sum-rec numbers sum))))
   
   ;Starts the inner recursion
@@ -37,8 +39,11 @@
         ;Starts the inner recursion again
         (begin
           (set! listOfSquares (append listOfSquares (list (* (list-ref numbers 0) (list-ref numbers 0) ))))
-          (set! numbers (remove (first numbers) numbers))
+          (set! numbers (remove (car numbers) numbers))
           (inner-square-rec numbers listOfSquares))))
   
   ;Starts the inner recursion
   (inner-square-rec listOfNumbers (list)))
+
+
+(check-equal? (square-my-list-rec (list 2 4 8)) (list 4 16 64))
