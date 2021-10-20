@@ -1,6 +1,4 @@
-#lang racket/base
-
-(require rackunit)
+#lang racket
 
 (define (sum-my-list-rec listOfNumbers)
 
@@ -44,6 +42,3 @@
   
   ;Starts the inner recursion
   (inner-square-rec listOfNumbers (list)))
-
-
-(check-equal? (square-my-list-rec (list 2 4 8)) (list 4 16 64))
