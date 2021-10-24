@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Theorieaufgabe 3</title>
+    </head>
+    <body>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Aufgabenstellung:
+        </h1>
+        <p style="font-family:'Verdana'; font-size: large;">
+			Welche der folgenden Ausdrücke sind Listen:
+				a. '(1 (2 3) . 4)
+
+				b. (list 1 2 3)
+
+				c. (cons 1 (cons 2 (cons 3 '())))
+
+				d. (cons 'a 'b)
+
+        </p>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Lösung:
+        </h1>
+        <p style="font-family:'Verdana'; font-size: large;">
+            Ausdruck b und c sind Listen. Ausdruck a und d sind vom Datentyp Pair. Der Unterschied zwischen einem Pair und einer Liste <br> besteht darin, dass Listen bearbeitet werden können und ein Pair nicht bearbeitet werden kann. Somit ist dieses 'immutable' <br>
+			und eine Liste 'mutable'. Eine List ist jedoch auch in der Typprüfung ein Pair. Die folgenden überprüfungen wurden mit <br> folgendem Code überprüft. Die beiden Methoden 'list?' und 'pair?' überprüfen hierbei ob der Datentyp des Objektes welches <br>
+			als Parameter übergeben wurde übereinstimmen. Hierbei ist der Rückgabewert der boolsche Wert 'true (#t)' wenn diese <br> übereinstimmen und 'false (#f)' wenn nicht.
+        </p>
+		
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe3.1.png?raw=true">
+		<br> <br>
+		
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe3.2.png?raw=true">
+		<br> <br>
+		
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe3.2.png?raw=true">
+		<br> <br>
+		
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe3.2.png?raw=true">
+		<a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe3.rkt">GitHub</a>
+		<br> <br>
+		
+		
+    </body>
+</html>
