@@ -10,10 +10,17 @@
             Aufgabenstellung:
         </h1>
         <p style="font-family:'Verdana'; font-size: large;">
-			Handelt es sich bei den folgenden drei Objekten um unterschiedliche oder gleiche Objekte:
-				green
-				'green
-				"green"
+			Ein Nutzer schreibt sich ein if neu, da es ja cond gibt: <br>
+			(define (new-if predicate then-clause else-clause) <br>
+			(cond (predicate then-clause) <br>
+			(else else-clause))) <br>
+			Erste Versuche zeigen: Das funktioniert auch. <br>
+			(new-if (= 2 3) 0 5) <br>
+			5 <br>
+			<br>
+			(new-if (= 1 1) 0 5) <br>
+			0 <br>
+			Funktioniert new-if nun wie if oder gibt es noch ein Problem? <br>
 
         </p>
 
@@ -21,8 +28,15 @@
             Lösung:
         </h1>
         <p style="font-family:'Verdana'; font-size: large;">
-            Dieses drei Objekte sind alle drei unterscheidlich. Das erste dieser Objekte könnte eine Variable oder ein Funktionsaufruf sein. <br>Das zweite Objekt ist vom Datentyp Symbol dieses wird extra mit dem ' Zeichen Quotiert. <br>
-			Das letzte Objekt ist vom Datentyp String da diese mit " gekennzeichnet wurde. Dies muss am anfang und am ende des Strings stehen.
+            Der neugeschrieben If-Ausdruck ist von der Funktionalität mit dem nativen identisch. Jedoch ist es nicht möglich in Racket <br>
+			nicht-Strikte Funktionen zu schreiben. Somit unterscheidet sich die Ausführungsreihenfolge der einzelnen Parameter. Da der <br>
+			native If-Ausdruck nicht-Strikt ist, sind diese nicht identisch. Somit wäre es möglich in den nativen If-Ausdruck undefinierte <br>
+			Werte zu übergeben und bei dem selsbtgeschriebenen If-Ausdruck nicht. Das folgende Beispiel erläutert den Unterschied zwischen <br>
+			den beiden Ausdrücken/Funktionen:
         </p>
+		<br> <br>
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe4.png?raw=true">
+		<br>
+		<a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe4.rkt">GitHub</a>
     </body>
 </html>
