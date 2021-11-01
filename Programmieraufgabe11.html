@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programmieraufgabe 11</title>
+    </head>
+    <body>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Aufgabenstellung:
+        </h1>
+        <p style="font-family:'Verdana'; font-size: large;">
+			Nehmen wir an, wir haben eine Funktion <br>
+			(define (f g) <br>
+			(g 2)) <br>
+			Dann gibt (f sqr) gleich 4, (f sqrt) gleich 1.4142... Was passiert, wenn man nun (f f) aufruft? Erklären Sie die das Ergebnis. <br>
+        </p>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Lösungsansatz:
+        </h1>
+        <p style="font-family:'Verdana'; font-size: large;">
+            Der Aufruf schlägt mit der Fehlermeldung "application: not a procedure; expected a procedure that can be applied to arguments <br> given: 2" fehl.<br>
+			Im ersten Rekursiven Vorgang wird die Funktion 'f' mit dem Parameter 2 aufgerufen, dies erfolgt Problemlos. Jedoch im <br>
+			zweiten Rekursiven Vorgang wird die vermeintliche Funktion '2' mit dem Parameter 2 aufgerufen. Da keinme Funktion mit dem <br>
+			Namen '2' existiert, schlägt der Versuch fehl und das Programm stürzt ab.
+        </p>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Illustration:
+        </h1>
+
+        <img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe11.png?raw=true">
+
+    </body>
+</html>
