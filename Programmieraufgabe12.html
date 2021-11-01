@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programmieraufgabe 12</title>
+    </head>
+    <body>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Aufgabenstellung:
+        </h1>
+        <p style="font-family:'Verdana'; font-size: large;">
+			Schreiben Sie eine Funktion repeated, die eine Funktion f und eine natürliche Zahl n erhält und dann f n-mal ausführt. <br> (Hinweis: Verwenden Sie die im Kurs bereits vorgestellten Standardfunktionen höherer Ordnung!) Beispiel:<br>
+			((repeated sqr 2) 3)<br>
+			81<br>
+			<br>
+			((repeated add1 10) 1)<br>
+			11 <br>
+        </p>
+		
+		<h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Lösungsansatz:
+        </h1>
+        <p style="font-family:'Verdana'; font-size: large;">
+            Die erste innere Funktion wird am ende der gesamten Funktion zurückgegeben. Der Inhalt der zurückgegebenen Funktion ist folgender:<br>
+			Es wird eine weitere innere Funktion erzeugt, welche zwei Parameter hat. Daraufhin wird geprüft ob der Ausdruck 'r == 0' wahr ist.<br>
+			Wenn der Ausdruck 'false' ist, wird die zweite innere Funktion aufgerufen, wobei r um eins dekrementiert wird.
+        </p>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Implementierung:
+        </h1>
+
+        <img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe12.png?raw=true">
+
+        <a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe12.rkt">GitHub</a>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Modultest:
+        </h1>
+
+        <img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Test12.png?raw=true">
+
+        <a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Test12.rkt">GitHub</a>
+
+    </body>
+</html>
