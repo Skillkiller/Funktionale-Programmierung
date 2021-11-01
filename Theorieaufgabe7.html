@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Theorieaufgabe 7</title>
+    </head>
+    <body>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Aufgabenstellung:
+        </h1>
+        <p style="font-family:'Verdana'; font-size: large;">
+			Was ist der Unterschied zwischen foldr und foldl und wie unterscheidet sich das Laufzeitverhalten? <br>
+			Wann ist das Ergebnis der beiden Funktionen gleich?
+        </p>
+
+        <h1 style="font-family:'Verdana'; font-size: xx-large;">
+            Lösung:
+        </h1>
+        <p style="font-family:'Verdana'; font-size: large;">
+			Bei den Fold Funktionen wird eine Liste abgearbeitet, hierbei wird bei 'foldl' die Liste von Links und bei 'foldr' die Liste <br>
+			von Rechts abgearbeitet. Hierbei wird die Funktion welche übergeben wird auf jedes Element aus der Liste der Reihenfolge nach <br>
+			angewendet. Da die Funktion welche übergeben wird über zwei Parameter verfügen muss, wird hierbei ein Initialwert und das <br> erste Element der List genommen für die Funktion. Das Ergebnis wird daraufhin in die Funktion eingesetzt und der Index der Liste um eins verschoben (bei foldl nach rechts und bei foldr nach links). Wenn der letzte Funktionsaufruf erfolgt wird das Ergbnis <br>dieser zurückgegeben.<br>
+			<br>
+			Es gibt zwei Szenarien in welchen das Ergebnis der beiden Funktionen gleich ist:<br>
+			<br>
+			Das Ergebnis und das Laufzeitverhalten ändern sich nicht, wenn die Struktur der Liste gleich einem Palindrom ist.<br>
+			Das folgende Beispiel zeigt wie die Liste welche von vorne nach hinten und von hinten nach vorne gelesen identisch ist <br>
+			das gleiche Erbniss liefert<br>
+        </p>
+		<br> 
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe7.1.png?raw=true">
+		<br>
+		<a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe7.1.rkt">GitHub</a>
+		
+		<p style="font-family:'Verdana'; font-size: large;">
+			Im zweiten Fall ist das Erbniss identisch, wenn die Funktion welche übergeben wird, dem Kommutativgesetz entspricht. <br>
+			Somit ist a+b=c und b+a=c. Jedoch ist nur das Ergebniss gleich und nicht die Ausführungsreihenfolge.
+        </p>
+		<br> 
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe7.2.png?raw=true">
+		<br>
+		<a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe7.2.rkt">GitHub</a>
+    </body>
+</html>
