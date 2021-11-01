@@ -1,4 +1,6 @@
-#lang racket
+#lang racket/base
+
+(require rackunit)
 
 (define (my-map func lst)
   
@@ -12,3 +14,5 @@
       (cons (func a) b)
      ) (list) lst)
   )
+
+(check-equal? (my-map add1 (list 2 4 8)) (list 3 5 9))
