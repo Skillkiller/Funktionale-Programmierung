@@ -1,7 +1,7 @@
 #lang racket/gui
 
 (require racket/gui/base)
-(require "tictactoe.rkt")
+(require "Aufgabe14.2.rkt")
 
 (define field-states (list 0 0 0
                            0 0 0
