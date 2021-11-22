@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Programmieraufgabe 10</title>
+        <title>Programmieraufgabe 14</title>
     </head>
     <body>
 
@@ -10,33 +10,35 @@
             Aufgabenstellung:
         </h1>
         <p style="font-family:'Verdana'; font-size: large;">
-			Schreiben Sie ein weiteres my-map unter Benutzung von einer fold-Funktion (entscheiden Sie selbst. welche).
+			"[...] ihre Idee des Spiels Tik-Tak-Toe [...] umsetzen. Um dies zu einer Herausforderung <br> zu machen, setze ich mir als Ziel das Spiel in einer Grafischen Oberfläche umzusetzen und<br>  zur Verifizierung des Siegers das Magische Quadrat zu verwenden.<br>  (https://de.wikipedia.org/wiki/Magisches_Quadrat#Die_Berechnung_der_magischen_Zahl)"<br> 
         </p>
 
         <h1 style="font-family:'Verdana'; font-size: xx-large;">
             Lösungsansatz:
         </h1>
         <p style="font-family:'Verdana'; font-size: large;">
-            Bei der Implementierung wird die 'foldr' Funktion genutzt. <br>
-			Hierbei wird jedes Element von Rechts nach Links abgelaufen <br>
-			Hierbei wird eine neue Liste mithilfe der 'cons' Funktion aus der Übergebenen Funktion und der Variable 'b' erzeugt.<br>
-        </p>
+            Der Spiel Tic-Tac-Toe wurde in Racket nach dem TDD (Test-Driver-Development) implementiert.<br> Für die Implementierung sind drei Racket Source-Code Dateien notwendig gewesen. Diese sind <br> voneinander abhängig.  Um die agile Entwicklungsmethode des TDD umzusetzen, wurde bevor es <br> überhaupt zu Implementierung kam, die „unit-test.rkt“ Datei geschrieben. Diese testet den <br> Tic-Tac-Toe Algorithmus auf seine Richtigkeit, indem alle möglichen gewinnenden Szenarien <br> abgedeckt und einige verlierende getestet werden. Der weitere Schritt war die „check-win“ <br> Funktion, welche in der „tictactoe.rkt“ Datei liegt und den Magic-Square-Algorithmus abbildet.<br>  Dieser Algorithmus bildet eine Matrix M ab welche die Dimension nxn (n Element natürliche Zahlen) besitzt. Der Inhalt der Matrix M muss Summiert in jeder Zeile, Spalte und Diagonalen<br>  einer Konstante Zahl k gleich sein. Die Zahl k wird auch die magische zahl genannt. Um dies<br>  umzusetzen, wird in einer dreifach geschachtelten For-Schleife jedes Element summiert und<br>  auf die Magische Zahl geprüft. Somit ist jede Möglichkeit in Tic-Tac-Toe zu gewinne <br> abgedeckt. Des Weiteren wird die Funktion „get“ implementiert, welche in der Matrix einen Index<br>  übergeben wird und das Element welches Rechts, Links, Oben und unter dem Element ist,<br>  zurückgegeben. Diese ist jedoch unbenutzt und wurde nur für eventuelle spätere Algorithmen im<br>  Code gelassen.<br> 
+Zuletzt wurde die „gui.rkt“ Datei erzeugt, welche das Grafische Design des Spiels implementiert. Hierbei<br>  wird der momentane interne Spielstatus in eine Liste „field-states“ gespeichert. Die Variable<br>  „player-state“ ist ein boolescher Wahrheitswert, welcher abbildet, ob Spieler 1 oder Spieler 2 am Zug ist.<br>  Die Grafische-Benutzer-Oberfläche besteht aus einem Fenster mit den Maßen „200x200“. Einer<br>  Test-Nachricht, welche angibt welcher Spieler am Zug ist. Drei horizontale Panels, welche zur Layout <br> Gestaltung beitragen, damit die innenliegenden neun Buttons ansprechend angereiht sind. Und einer unteren<br>  Test-Nachricht, welche angibt welcher Spieler gewonnen hat.
+Bei jedem Aufruf des Button-Callbacks wird geprüft welcher Spiele an der Reihe ist, ob der Feld welches er<br>  anklickt, angeklickt werden darf, seine Entscheidung wird intern gespeichert in der „field-states“<br>  Variable und es wird zuletzt geprüft ob dieser gewonnen hat oder nicht. Wenn dieser gewonnen hat, sind<br>  alle Knöpfe deaktiviert und die „winner-message“ gibt an welcher Spieler gewonnen hat.<br> 
 
+        </p>
+<br>
         <h1 style="font-family:'Verdana'; font-size: xx-large;">
             Implementierung:
         </h1>
 
-        <img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe10.png?raw=true">
+        <img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe14.1.png?raw=true">
 
-        <a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe10.rkt">GitHub</a>
+        <a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe14.1.rkt">GitHub</a>
+		
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe14.2.png?raw=true">
 
-        <h1 style="font-family:'Verdana'; font-size: xx-large;">
-            Modultest:
-        </h1>
+        <a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe14.2.rkt">GitHub</a>
+		
+		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe14.3.png?raw=true">
 
-        <img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Test10.png?raw=true">
+        <a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe14.3.rkt">GitHub</a>
 
-        <a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Test10.rkt">GitHub</a>
 
     </body>
 </html>
