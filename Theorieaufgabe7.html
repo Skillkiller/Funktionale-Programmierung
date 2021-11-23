@@ -18,15 +18,13 @@
             Lösung:
         </h1>
         <p style="font-family:'Verdana'; font-size: large;">
-			Bei den Fold Funktionen wird eine Liste abgearbeitet, hierbei wird bei 'foldl' die Liste von Links und bei 'foldr' die Liste <br>
-			von Rechts abgearbeitet. Hierbei wird die Funktion welche übergeben wird auf jedes Element aus der Liste der Reihenfolge nach <br>
-			angewendet. Da die Funktion welche übergeben wird über zwei Parameter verfügen muss, wird hierbei ein Initialwert und das <br> erste Element der List genommen für die Funktion. Das Ergebnis wird daraufhin in die Funktion eingesetzt und der Index der Liste um eins verschoben (bei foldl nach rechts und bei foldr nach links). Wenn der letzte Funktionsaufruf erfolgt wird das Ergbnis <br>dieser zurückgegeben.<br>
+			Bei den Fold Funktionen wird eine Liste abgearbeitet, hierbei wird bei 'foldl' die Liste von links und bei 'foldr' die Liste <br>
+			von rechts abgearbeitet. Hierbei wird die Funktion welche übergeben wird auf jedes Element aus der Liste der Reihenfolge nach angewendet. Da die Funktion welche übergeben wird über zwei Parameter verfügen muss, wird hierbei ein Initialwert und das erste Element der Liste genommen für die Funktion. Das Ergebnis wird daraufhin in die Funktion eingesetzt und der Index der Liste um eins verschoben (bei foldl nach rechts und bei foldr nach links). Wenn der letzte Funktionsaufruf erfolgt wird das Ergebnis dieser zurückgegeben.<br>
 			<br>
 			Es gibt zwei Szenarien in welchen das Ergebnis der beiden Funktionen gleich ist:<br>
 			<br>
-			Das Ergebnis und das Laufzeitverhalten ändern sich nicht, wenn die Struktur der Liste gleich einem Palindrom ist.<br>
-			Das folgende Beispiel zeigt wie die Liste welche von vorne nach hinten und von hinten nach vorne gelesen identisch ist <br>
-			das gleiche Erbniss liefert<br>
+			Das Ergebnis und das Laufzeitverhalten ändern sich nicht, wenn die Struktur der Liste gleich einem Palindrom ist.
+			Das folgende Beispiel zeigt wie die Liste welche von vorne nach hinten und von hinten nach vorne gelesen identisch ist das gleiche Ergebnis liefert.
         </p>
 		<br> 
 		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe7.1.png?raw=true">
@@ -34,8 +32,8 @@
 		<a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe7.1.rkt">GitHub</a>
 		
 		<p style="font-family:'Verdana'; font-size: large;">
-			Im zweiten Fall ist das Erbniss identisch, wenn die Funktion welche übergeben wird, dem Kommutativgesetz entspricht. <br>
-			Somit ist a+b=c und b+a=c. Jedoch ist nur das Ergebniss gleich und nicht die Ausführungsreihenfolge.
+			Im zweiten Fall ist das Ergebnis identisch, wenn die Funktion welche übergeben wird, dem Kommutativgesetz entspricht. <br>
+			Somit ist a+b=c und b+a=c. Jedoch ist nur das Ergebnis gleich und nicht die Ausführungsreihenfolge.
         </p>
 		<br> 
 		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Theorieaufgabe7.2.png?raw=true">

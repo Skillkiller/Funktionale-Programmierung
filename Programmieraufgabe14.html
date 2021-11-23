@@ -17,16 +17,16 @@
             Lösungsansatz:
         </h1>
         <p style="font-family:'Verdana'; font-size: large;">
-            Der Spiel Tic-Tac-Toe wurde in Racket nach dem TDD (Test-Driver-Development) implementiert. Für die Implementierung sind drei Racket Source-Code Dateien notwendig gewesen. Diese sind  voneinander abhängig.  Um die agile Entwicklungsmethode des TDD umzusetzen, wurde bevor es  überhaupt zu Implementierung kam, die „unit-test.rkt“ Datei geschrieben. Diese testet den Tic-Tac-Toe Algorithmus auf seine Richtigkeit, indem alle möglichen gewinnenden Szenarien  abgedeckt und einige verlierende getestet werden.
+            Das Spiel Tic-Tac-Toe wurde in Racket nach dem TDD (Test-Driver-Development) implementiert. Für die Implementierung sind drei Racket Source-Code Dateien notwendig gewesen. Diese sind  voneinander abhängig.  Um die agile Entwicklungsmethode des TDD umzusetzen, wurde bevor es  überhaupt zu Implementierung kam, die „unit-test.rkt“ Datei geschrieben. Diese testet den Tic-Tac-Toe Algorithmus auf seine Richtigkeit, indem alle möglichen gewinnenden Szenarien  abgedeckt und einige verlierende getestet werden.
 			<br><br>
-			Der weitere Schritt war die „check-win“  Funktion, welche in der „tictactoe.rkt“ Datei liegt und den Magic-Square-Algorithmus abbildet. Dieser Algorithmus bildet eine Matrix M ab welche die Dimension nxn (n Element natürliche Zahlen) besitzt. Der Inhalt der Matrix M muss Summiert in jeder Zeile, Spalte und Diagonalen  einer Konstante Zahl k gleich sein. Die Zahl k wird auch die magische zahl genannt. Um dies  umzusetzen, wird in einer dreifach geschachtelten For-Schleife jedes Element summiert undauf die Magische Zahl geprüft. Somit ist jede Möglichkeit in Tic-Tac-Toe zu gewinne abgedeckt. Des Weiteren wird die Funktion „get“ implementiert, welche in der Matrix einen Index übergeben wird und das Element welches Rechts, Links, Oben und unter dem Element ist,zurückgegeben. Diese ist jedoch unbenutzt und wurde nur für eventuelle spätere Algorithmen im Code gelassen.
+			Der weitere Schritt war die „check-win“  Funktion, welche in der „tictactoe.rkt“ Datei liegt und den Magic-Square-Algorithmus abbildet. Dieser Algorithmus bildet eine Matrix M ab welche die Dimension nxn (n Element der natürlichen Zahlen) besitzt. Der Inhalt der Matrix M muss summiert in jeder Zeile, Spalte und Diagonalen einer Konstanten Zahl k gleich sein. Die Zahl k wird auch die magische Zahl genannt. Um dies umzusetzen, wird in einer dreifach geschachtelten For-Schleife jedes Element summiert und die Summe auf die magische Zahl geprüft. Somit ist jede Möglichkeit in Tic-Tac-Toe zu gewinnen abgedeckt. Des Weiteren wird die Funktion „get“ implementiert, welche in der Matrix einen Index übergeben wird und das Element welches rechts, links, über und unter dem Element ist, zurückgegeben. Diese ist jedoch unbenutzt und wurde nur für eventuelle spätere Algorithmen im Code belassen.
 			<br><br>
-			Zuletzt wurde die „gui.rkt“ Datei erzeugt, welche das Grafische Design des Spiels implementiert. Hierbei  wird der momentane interne Spielstatus in eine Liste „field-states“ gespeichert. Die Variable„player-state“ ist ein boolescher Wahrheitswert, welcher abbildet, ob Spieler 1 oder Spieler 2 am Zug ist. Die Grafische-Benutzer-Oberfläche besteht aus einem Fenster mit den Maßen „200x200“. Einer Test-Nachricht, welche angibt welcher Spieler am Zug ist. Drei horizontale Panels, welche zur Layout Gestaltung beitragen, damit die innenliegenden neun Buttons ansprechend angereiht sind. Und einer unteren Test-Nachricht, welche angibt welcher Spieler gewonnen hat.
+			Zuletzt wurde die „gui.rkt“ Datei erzeugt, welche das grafische Design des Spiels implementiert. Hierbei  wird der momentane interne Spielstatus in eine Liste „field-states“ gespeichert. Die Variable „player-state“ ist ein boolescher Wahrheitswert, welcher abbildet, ob Spieler 1 oder Spieler 2 am Zug ist. Die Grafische-Benutzer-Oberfläche besteht aus einem Fenster mit den Maßen „200x200“. Einer Test-Nachricht, welche angibt welcher Spieler am Zug ist. Drei horizontale Panels, welche zur Layout-Gestaltung beitragen, damit die innenliegenden neun Buttons ansprechend angereiht sind und einer unteren Test-Nachricht, welche angibt welcher Spieler gewonnen hat.
 			<br><br>
-			Bei jedem Aufruf des Button-Callbacks wird geprüft welcher Spiele an der Reihe ist, ob das Feld welches er  anklickt, angeklickt werden darf, seine Entscheidung wird intern gespeichert in der „field-states“ Variable und es wird zuletzt geprüft ob dieser gewonnen hat oder nicht. Wenn dieser gewonnen hat, sind alle Knöpfe deaktiviert und die „winner-message“ gibt an welcher Spieler gewonnen hat.
+			Bei jedem Aufruf des Button-Callbacks wird geprüft welcher Spieler an der Reihe ist, ob das Feld welches er anklickt, angeklickt werden darf, seine Entscheidung wird intern gespeichert in der „field-states“ Variable und es wird zuletzt geprüft ob dieser gewonnen hat oder nicht. Wenn dieser gewonnen hat, sind alle Buttons deaktiviert und die „winner-message“ gibt an welcher Spieler gewonnen hat.
 
         </p>
-<br>
+		<br>
 
         <h1 style="font-family:'Verdana'; font-size: xx-large;">
             Implementierung:
@@ -52,7 +52,7 @@
         </h1>
 		
 		<img src="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe14.4.gif?raw=true">
-		
+		<br>
 		<a href="https://github.com/Flowingblood/Funktionale-Programmierung/blob/main/Aufgabe14.4.gif">GitHub</a>
 
     </body>
